@@ -1,0 +1,68 @@
+<html>
+<head>
+<style>
+.lediv {
+  perspective: 800px;
+}
+
+.deca {
+  font-size: 4em;
+  width: 2em;
+  margin: 1.5em auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-45deg) rotateY(30deg);
+  transition-duration: 1s;
+}
+
+.deca:hover {
+  font-size: 4em;
+  width: 2em;
+  margin: 1.5em auto;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg) rotateY(10deg);
+  transition-duration: 1s;
+}
+
+
+.side {
+  position: absolute;
+  width: 1em;
+  height: 1.3em;
+  background: rgba(60,60,60,0.8);
+  border: 2px solid green;
+  text-align: center;
+  line-height: 1em;
+}
+
+.ONE {transform: translateZ(2em);}
+.TWO {transform: rotateX(36deg) translateZ(2em);}
+.THREE {transform: rotateX(72deg) translateZ(2em);}
+.FOUR {transform: rotateX(108deg) translateZ(2em);}
+.FIVE {transform: rotateX(144deg) translateZ(2em);}
+.SIX {transform: rotateX(180deg) translateZ(2em);}
+.SEVEN {transform: rotateX(216deg) translateZ(2em);}
+.EIGHT {transform: rotateX(252deg) translateZ(2em);}
+.NINE {transform: rotateX(288deg) translateZ(2em);}
+.TEN {transform: rotateX(324deg) translateZ(2em);}
+</style>
+
+</head>
+<body>
+
+<div class="lediv">
+  <div class="deca">
+  <div class="side ONE">1</div>
+  <div class="side TWO">2</div>
+  <div class="side THREE">3</div>
+  <div class="side FOUR">4</div>
+  <div class="side FIVE">5</div>
+  <div class="side SIX">6</div>
+  <div class="side SEVEN">7</div>
+  <div class="side EIGHT">8</div>
+  <div class="side NINE">9</div>
+  <div class="side TEN">10</div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            body {
+                display: inline;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .bourgeois {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+            }
+            .side {
+                height: 100px;
+                width: 100px;
+                background-color: brown;
+                border: solid 2px black;
+            }
+            .one {
+                transform-origin: center;
+                transform: rotate(30deg) translate(100px);
+            }
+            .penta {
+                transform-origin: 50vw 50vh;
+                transform: rotate(0deg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bourgeois">
+            <div class="penta">
+                <div class="side one">1</div>
+                <div class="side two">2</div>
+                <div class="side three">3</div>
+                <div class="side four">4</div>
+                <div class="side five">5</div>
+            </div>
+        </div>
+    </body>
+</html>

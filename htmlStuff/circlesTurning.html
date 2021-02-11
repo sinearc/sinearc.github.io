@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            @keyframes spinCW {
+                20% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+
+            @keyframes spinCCW {
+                20% {
+                    transform: rotate(360deg);
+                }
+                100% {
+                    transform: rotate(0deg);
+                }
+            }
+
+            @keyframes cshift {
+                0% {
+                    background-color: #FC0;
+                }
+                50% {
+                    background-color: #c8ca5e;
+                }
+                100% {
+                    background-color: #FC0;
+                }
+            }
+
+            .cw { animation: spinCW 4s infinite ease-in-out; }
+            .fcw { animation: spinCW 2s infinite ease-in-out; }
+            .ccw { animation: spinCCW 4s infinite ease-in-out; }
+            .br { transform-origin: bottom right; }
+            .bl { transform-origin: bottom left; }
+            .tr { transform-origin: top right; }
+            .tl { transform-origin: top left; }
+            .c { transform-origin: center; }
+            .colorshift { animation: cshift 2.5s infinite ease-in-out; }
+        </style>
+    </head>
+    <body>
+        <svg class="ccw colorshift" style="width: 40vw; height: 40vw; border-radius: 50%;" viewBox="0 0 100 100">
+            <g class="fcw c">
+                <rect class="cw br" width="10" height="10" x="50%" y="50%" style="fill: #000000;" />
+                <circle class="cw br" r="10" cx="50%" cy="50%" style="fill: #000000;" />
+            </g>
+            <g class="fcw c">
+                <rect class="cw tr" width="10" height="10" x="50%" y="40%" style="fill: #000000;" />
+                <circle class="cw tr" r="10" cx="50%" cy="50%" style="fill: #000000;" />
+            </g>
+            <g class="fcw c">
+                <rect class="cw bl" width="10" height="10" x="40%" y="50%" style="fill: #000000;" />
+                <circle class="cw bl" r="10" cx="50%" cy="50%" style="fill: #000000;" />
+            </g>
+            <g class="fcw c">
+                <rect class="cw tl" width="10" height="10" x="40%" y="40%" style="fill: #000000;" />
+                <circle class="cw tl" r="10" cx="50%" cy="50%" style="fill: #000000;" />
+            </g>
+        </svg>
+    </body>
+</html>
