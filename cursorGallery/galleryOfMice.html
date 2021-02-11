@@ -6,6 +6,17 @@
 
             h1 {
                 font-family: 'Playfair Display', serif;
+                margin-bottom: 0px;
+                font-size: 40px;
+                color: rgb(255, 255, 255);
+            }
+
+            h3 {
+                margin-top: 0px;
+                margin-bottom: 30px;
+                font-family: 'Playfair Display', serif;
+                font-size: 20px;
+                color: rgb(255, 255, 255);
             }
 
             body {
@@ -13,6 +24,7 @@
                 flex-direction: column;
                 width: 100vw;
                 align-items: center;
+                background-color: black;
             }
 
             #mainGallery {
@@ -22,11 +34,40 @@
                 flex-wrap: wrap;
             }
 
-            .cursorBox {
+            .imgAndName {
+                display: flex;
+                flex-direction: column;
+                margin-bottom: 15px;
+            }
+            
+            .cursorImgBox {
                 min-width: 100px;
                 min-height: 100px;
-                background-color: black;
+                background-color: rgba(255, 255, 255, 0.3);
                 border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 5px;
+            }
+
+            .lineName {
+                background-color: rgba(255, 255, 255, 0.3);
+                width: 100px;
+                height: 25px;
+                text-align: center;
+                vertical-align: middle;
+                border-radius: 10px;
+                font-family: 'Playfair Display', serif;
+                color: #ffffff;
+            }
+            svg {
+                width: 90px;
+            }
+            #gnome {
+                height: 90px;
+                transform: rotate(-45deg);
             }
         </style>
     </head>
@@ -34,21 +75,70 @@
         <h1>Gallery Of Cursors</h1>
         <h3>Some wretched, some wondrous</h3>
         <div id="mainGallery">
-            <div class="cursorBox">
 
+            <div class="imgAndName">
+                <div class="cursorImgBox">
+                    <svg viewBox="0 0 58 54" id="rat">
+                        <path d="M 39 24 Q 66 27 42 39 Q 30 45 48 54 Q 30 45 45 39 Q 72 27 39 21 z" fill="#e76b83"></path>
+                        <path d="M 0 3 C 0 12 6 24 18 30 C 42 42 48 15 36 9 C 24 3 15 12 6 3 C 3 0 0 0 0 3 z" fill="#cca420"></path>
+                        <path d="M 15 9 C 12 0 33 0 18 12 C 15 9 24 6 15 9 z" fill="#e76b83" stroke="#cca420" stroke-width="1"></path>
+                    </svg>
+                </div>
+                <div class="lineName">
+                    Rat
+                </div>
             </div>
-            <div class="cursorBox">
-
+            
+            <div class="imgAndName">
+                <div class="cursorImgBox" id="bat">
+                    <svg viewBox='0 0 96 35'>
+                        <path d='M 0 16 C 26 10 26 6 30 0 C 38 4 36 8 42 12 L 44 10 Q 44 0 48 10 Q 52 0 52 10 L 54 12 C 60 8 58 4 66 0 C 70 6 70 10 96 16 C 80 24 76 18 70 24 C 72 16 54 38 58 26 C 60 18 56 20 54 24 C 48 38 48 38 42 24 C 40 20 36 18 38 26 C 42 38 24 16 26 24 C 20 18 16 24 0 16 z M -7 -8' fill='%23000000'/>
+                    </svg>
+                </div>
+                <div class="lineName">
+                    Bat
+                </div>
             </div>
-            <div class="cursorBox">
-
+            
+            <div class="imgAndName">
+                <div class="cursorImgBox">
+                    <svg viewBox="0 0 15 15" id="shapeOne">
+                        <path d="M 0 0 C 4 8 1 12 0 15 C 20 8 8 20 15 0 C 12 1 8 4 0 0 z" fill="#000000 "></path>
+                        <path d="M 5 8 Q 3 11 4 16 C 11 15 13 16 8 8 C 16 13 15 11 16 4 Q 11 3 8 5 C 5 7 7 5 5 8 z" fill="#FF0000"></path>
+                    </svg>
+                </div>
+                <div class="lineName">
+                    Shape 1
+                </div>
             </div>
-            <div class="cursorBox">
-
+            
+            <div class="imgAndName">
+                <div class="cursorImgBox">
+                    <svg viewBox="16 0 51 81" id="gnome">
+                        <path d="M 36 72 c 0 9 3 9 -12 9 c -9 0 -9 -15 3 -9 c 6 -3 -3 -3 9 -3 z " style="fill: black;"></path>
+                        <path d="M 48 72 c 0 9 -3 9 12 9 c 9 0 9 -15 -3 -9 c -6 -3 3 -3 -9 -3 z " style="fill: black;"></path>
+                        <path d="M 42 57 l 18 -3 l -15 -21 l -6 0 l -15 21 l 0 0 z " style="fill: #e0ab8b;"></path>
+                        <path d="M 24 51 c 6 -15 15 -27 15 -45 c 0 -6 6 -6 6 -3 c 0 21 9 33 15 48 c -21 -3 -15 -3 -36 0 z" style="fill: #a50d0d;"></path>
+                        <path d="M 39 54 c -9 0 -12 -6 -15 0 c -6 12 9 15 18 27 c 9 -12 24 -15 18 -27 c -3 -6 -6 0 -15 0 z" style="fill: white;"></path>
+                        <circle cx="42" cy="51" r="6" fill="#e0ab8b" stroke-width="0.3" stroke="white"></circle>
+                    </svg>
+                </div>
+                <div class="lineName">
+                    Gnome
+                </div>
             </div>
-            <div class="cursorBox">
-
+            
+            <div class="imgAndName">
+                <div class="cursorImgBox">
+                    <svg viewBox="0 0 100 100">
+                        <circle cx="50%" cy="50%" r="25%" fill="#ffffff"></circle>
+                    </svg>
+                </div>
+                <div class="lineName">
+                    Cursor
+                </div>
             </div>
+            
         </div>
     </body>
 </html>
