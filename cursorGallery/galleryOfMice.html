@@ -9,12 +9,6 @@
                 let d = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100px' width='100px' ${c.substring(6)}`;
                 document.querySelector("body").style.cursor = `url("${d}"), auto`;
             }
-            window.onload = function () {
-                let cursors = document.getElementsByTagName("SVG")
-                for (cursor of cursors){
-                    cursor.onclick = "changeCursor(this)"
-                }
-            }
         </script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
@@ -91,7 +85,7 @@
 
             <div class="imgAndName">
                 <div class="cursorImgBox">
-                    <svg viewBox="0 0 58 54" id="rat">
+                    <svg viewBox="0 0 58 54" id="rat" onclick="changeCursor(this)">
                         <path d="M 39 24 Q 66 27 42 39 Q 30 45 48 54 Q 30 45 45 39 Q 72 27 39 21 z" fill="#e76b83"></path>
                         <path d="M 0 3 C 0 12 6 24 18 30 C 42 42 48 15 36 9 C 24 3 15 12 6 3 C 3 0 0 0 0 3 z" fill="#cca420"></path>
                         <path d="M 15 9 C 12 0 33 0 18 12 C 15 9 24 6 15 9 z" fill="#e76b83" stroke="#cca420" stroke-width="1"></path>
@@ -103,7 +97,7 @@
             </div>
             
             <div class="imgAndName">
-                <div class="cursorImgBox" id="bat">
+                <div class="cursorImgBox" id="bat" onclick="changeCursor(this)">
                     <svg viewBox='0 0 96 35'>
                         <path d='M 0 16 C 26 10 26 6 30 0 C 38 4 36 8 42 12 L 44 10 Q 44 0 48 10 Q 52 0 52 10 L 54 12 C 60 8 58 4 66 0 C 70 6 70 10 96 16 C 80 24 76 18 70 24 C 72 16 54 38 58 26 C 60 18 56 20 54 24 C 48 38 48 38 42 24 C 40 20 36 18 38 26 C 42 38 24 16 26 24 C 20 18 16 24 0 16 z M -7 -8' fill='%23000000'/>
                     </svg>
@@ -115,7 +109,7 @@
             
             <div class="imgAndName">
                 <div class="cursorImgBox">
-                    <svg viewBox="0 0 15 15" id="shapeOne">
+                    <svg viewBox="0 0 15 15" id="shapeOne" onclick="changeCursor(this)">
                         <path d="M 0 0 C 4 8 1 12 0 15 C 20 8 8 20 15 0 C 12 1 8 4 0 0 z" fill="#000000 "></path>
                         <path d="M 5 8 Q 3 11 4 16 C 11 15 13 16 8 8 C 16 13 15 11 16 4 Q 11 3 8 5 C 5 7 7 5 5 8 z" fill="#FF0000"></path>
                     </svg>
@@ -127,7 +121,7 @@
             
             <div class="imgAndName">
                 <div class="cursorImgBox">
-                    <svg viewBox="0 0 75 75" id="gnome">
+                    <svg viewBox="0 0 75 75" id="gnome" onclick="changeCursor(this)">
                         <path d="M 49 58 c 6.364 6.364 8.4853 4.2426 -2.1213 14.8492 c -6.364 6.364 -16.9706 -4.2426 -4.2426 -8.4853 c 2.1213 -6.364 -4.2426 -0 4.2426 -8.4853 Z" style="fill: black;"></path>
                         <path d="M 57.4853 49.5147 c 6.364 6.364 4.2426 8.4853 14.8492 -2.1213 c 6.364 -6.364 -4.2426 -16.9706 -8.4853 -4.2426 c -6.364 2.1213 0 -4.2426 -8.4853 4.2426 Z" style="fill: black;"></path>
                         <path d="M 42.636 43.1508 l 10.6066 -14.8492 l -25.4558 -4.2426 l -4.2426 4.2426 l 4.2426 25.4558 l 0 0 Z" style="fill: #e0ab8b;"></path>
@@ -143,7 +137,7 @@
             
             <div class="imgAndName">
                 <div class="cursorImgBox">
-                    <svg viewBox="0 0 37 37">
+                    <svg viewBox="0 0 37 37" id="heart" onclick="changeCursor(this)">
                         <path d='M 0 0 L 4 24 C 8 48 32 32 20 20 C 32 32 48 8 24 4 z' fill='#ff3e78'/>
                     </svg>
                 </div>
@@ -153,7 +147,7 @@
             </div>
             
             <div class="imgAndName">
-                <div class="cursorImgBox">
+                <div class="cursorImgBox" id="crown" onclick="changeCursor(this)">
                     <svg viewBox="0 0 18 18">
                         <path d="M 1 1 l 5 8 l -5 -3 l 3 5 l -3 -1 l 2 2 l 5 5 c 2 2 11 -7 9 -9 l -5 -5 l -2 -2 l 1 3 l -5 -3 l 3 5 z " fill="#ffcc00" />
                         <path d="M 8.8 17.8 m 1 -8 c 1 -1 2 -1 3 0 c 1 1 1 2 0 3 c -1 1 -2 1 -3 0 c -1 -1 -1 -2 0 -3 z m -3 3 c 1 0 1 0 2 1 c 1 1 1 2 0 2 c -1 0 -1 0 -2 -1 c -1 -1 -1 -2 0 -2 z m 6 -6 c 0 -1 1 -1 2 0 c 1 1 1 1 1 2 c 0 1 -1 1 -2 0 c -1 -1 -1 -1 -1 -2 z" fill="#167dc2" />
