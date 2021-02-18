@@ -2,8 +2,8 @@
 <html>
     <head>
         <script>
-            function changeCursor() {
-                let a = this.outerHTML;
+            function changeCursor(x) {
+                let a = x.outerHTML;
                 let b = a.replaceAll(`"`, `'`).replaceAll(`<`, `%3C`).replaceAll(`>`, `%3E`).replaceAll(`#`, `%23`);
                 let c = b.split("\n").map(v => v.substring(v.indexOf("%"))).join("");
                 let d = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100px' width='100px' ${c.substring(6)}`;
@@ -12,7 +12,7 @@
             window.onload = function () {
                 let cursors = document.getElementsByTagName("SVG")
                 for (cursor of cursors){
-                    cursor.addEventListener("click", changeCursor().bind(cursor))
+                    cursor.onclick = "changeCursor(this)"
                 }
             }
         </script>
