@@ -1,6 +1,21 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script>
+            function changeCursor() {
+                let a = this.outerHTML;
+                let b = a.replaceAll(`"`, `'`).replaceAll(`<`, `%3C`).replaceAll(`>`, `%3E`).replaceAll(`#`, `%23`);
+                let c = b.split("\n").map(v => v.substring(v.indexOf("%"))).join("");
+                let d = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='100px' width='100px' ${c.substring(6)}`;
+                document.querySelector("body").style.cursor = `url("${d}"), auto`;
+            }
+            window.onload = function () {
+                let cursors = document.getElementsByTagName("SVG")
+                for (cursor of cursors){
+                    cursor.addEventListener("click", changeCursor)
+                }
+            }
+        </script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
 
