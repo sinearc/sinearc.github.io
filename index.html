@@ -1,67 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <head>
+	<head>
 		<link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1>Ordered and unordered lists are evils to be avoided</h1>
-        <a href="cursorGallery/galleryOfMice.html">
-            <h3>Gallery of Mice</h3>
-        </a>
-        <ul>
-            <li>
-                <a href="htmlStuff\8ball.html">8ball</a>
-            </li>
-            
-            <li>
-                <a href="htmlStuff\circlesTurning.html">circlesTurning</a>
-            </li>
-            <li>
-                <a href="htmlStuff\cryptex.html">cryptex</a>
-            </li>
-            <li>
-                <a href="htmlStuff\CSSGRADIENTSPRACTICE.html">CSSGRADIENTSPRACTICE</a>
-            </li>
-            <li>
-                <a href="htmlStuff\cursors.html">cursors</a>
-            </li>
-            <li>
-                <a href="htmlStuff\gnome.html">gnome</a>
-            </li>
-            <li>
-                <a href="htmlStuff\gridpractice.html">gridpractice</a>
-            </li>
-            <li>
-                <a href="htmlStuff\html dump.html">html dump</a>
-            </li>
-            <li>
-                <a href="htmlStuff\ifunny.html">ifunny</a>
-            </li>
-            <li>
-                <a href="htmlStuff\mouse tracking fun.html">mouse tracking fun</a>
-            </li>
-            <li>
-                <a href="htmlStuff\ratwarning.html">ratwarning</a>
-            </li>
-            <li>
-                <a href="htmlStuff\redflash.html">redflash</a>
-            </li>
-            <li>
-                <a href="htmlStuff\rotationexperiments.html">rotationexperiments</a>
-            </li>
-            <li>
-                <a href="htmlStuff\triangle bullshit DOM take 2.html">triangle bullshit DOM take 2</a>
-            </li>
-            <li>
-                <a href="htmlStuff\triangle bullshit DOM.html">triangle bullshit DOM</a>
-            </li>
-            <li>
-                <a href="htmlStuff\weirdeffectdiscoveredwithcryptex.html">weirdeffectdiscoveredwithcryptex</a>
-            </li>
-            <li>
-                <a href="htmlStuff\wordart styles.html">wordart styles</a>
-            </li>
-        </ul>
+		<script src="./test.js" crossorigin="anonymous"></script>
+		<script>
+			window.onload = function () {
+				function listToggle() {
+					list = this.nextElementSibling
+					list.classList.toggle('graduallyHidden')
+				}
+				let list = document.getElementById('htmldumplistheader')
+				list.addEventListener('click', listToggle)
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Ordered and unordered lists are evils to be avoided</h1>
+		<a href="cursorGallery/galleryOfMice.html">
+			<h3>Gallery of Mice</h3>
+		</a>
+		<div id="htmldumpcontainer">
+			<h3 id="htmldumplistheader">HTML pile</h3>
+			<ul id="htmldumplist">
+				<li>
+					<a href="htmlStuff\8ball.html">8ball</a>
+				</li>
+				
+				<li>
+					<a href="htmlStuff\circlesTurning.html">circlesTurning</a>
+				</li>
+				<li>
+					<a href="htmlStuff\cryptex.html">cryptex</a>
+				</li>
+				<li>
+					<a href="htmlStuff\CSSGRADIENTSPRACTICE.html">CSSGRADIENTSPRACTICE</a>
+				</li>
+				<li>
+					<a href="htmlStuff\cursors.html">cursors</a>
+				</li>
+				<li>
+					<a href="htmlStuff\gnome.html">gnome</a>
+				</li>
+				<li>
+					<a href="htmlStuff\gridpractice.html">gridpractice</a>
+				</li>
+				<li>
+					<a href="htmlStuff\html dump.html">html dump</a>
+				</li>
+				<li>
+					<a href="htmlStuff\ifunny.html">ifunny</a>
+				</li>
+				<li>
+					<a href="htmlStuff\mouse tracking fun.html">mouse tracking fun</a>
+				</li>
+				<li>
+					<a href="htmlStuff\ratwarning.html">ratwarning</a>
+				</li>
+				<li>
+					<a href="htmlStuff\redflash.html">redflash</a>
+				</li>
+				<li>
+					<a href="htmlStuff\rotationexperiments.html">rotationexperiments</a>
+				</li>
+				<li>
+					<a href="htmlStuff\triangle bullshit DOM take 2.html">triangle bullshit DOM take 2</a>
+				</li>
+				<li>
+					<a href="htmlStuff\triangle bullshit DOM.html">triangle bullshit DOM</a>
+				</li>
+				<li>
+					<a href="htmlStuff\weirdeffectdiscoveredwithcryptex.html">weirdeffectdiscoveredwithcryptex</a>
+				</li>
+				<li>
+					<a href="htmlStuff\wordart styles.html">wordart styles</a>
+				</li>
+			</ul>			
+		</div>
+
 		<img src="./images/eastward.gif"></img>
-    </body>
+	</body>
 </html>
