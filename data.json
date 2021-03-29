@@ -1,22 +1,22 @@
 {	"folder": "htmlStuff",
-	"htmlDumpItems":
+	"items":
 	[
-		"8ball.html",
-		"circlesTurning.html",
-		"cryptex.html",
-		"CSSGRADIENTSPRACTICE.html",
-		"cursors.html",
-		"gnome.html",
-		"gridpractice.html",
-		"html dump.html",
-		"ifunny.html",
-		"mouse tracking fun.html",
-		"ratwarning.html",
-		"redflash.html",
-		"rotationexperiments.html",
-		"triangle bullshit DOM take 2.html",
-		"triangle bullshit DOM.html",
-		"weirdeffectdiscoveredwithcryptex.html",
-		"wordart styles.html"
+		"8ball",
+		"circlesTurning",
+		"cryptex",
+		"CSSGRADIENTSPRACTICE",
+		"cursors",
+		"gnome",
+		"gridpractice",
+		"html dump",
+		"ifunny",
+		"mouse tracking fun",
+		"ratwarning",
+		"redflash",
+		"rotationexperiments",
+		"triangle bullshit DOM take 2",
+		"triangle bullshit DOM",
+		"weirdeffectdiscoveredwithcryptex",
+		"wordart styles"
 	]
 }

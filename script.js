@@ -1,5 +1,11 @@
 function handleData(data) {
-	console.log(data)
+	let pref = data.folder
+	let arr = []
+	for (item of data.items) {
+		arr.push(`<li><a href="${pref}\\${item}.html">${item}</a></li>`)
+	}
+	let genText = arr.join('')
+	document.getElementById('htmldumplist').innerHTML = genText
 }
 
 
