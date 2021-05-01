@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		@keyframes spin {
+			0% { transform: rotate(0deg); }
+			100% { transform: rotate(360deg); }
+		}
+		@keyframes fade {
+			0% { opacity: 0; }
+			100% { opacity: 1; }
+		}
+
+		body {
+			display: flex;
+			height: 100vh;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+
+		#smileyAnim {
+			max-width: 60vw;
+
+		}
+
+		svg > * {
+			fill: none;
+		}
+
+		#outerWhiteLine {
+			stroke: white;
+			stroke-width: 4;
+			fill: #254374;
+		}
+		#gradientCircle {
+			fill: url(#lightDark);
+			stroke: white;
+			stroke-width: 4;
+			animation: fade 1s linear infinite alternate;
+		}
+		#innerWhiteLine {
+			stroke: white;
+			stroke-width: 4;
+		}
+		#smileyBody {
+			fill: white;
+		}
+		#smileyMouth {
+			fill: black;
+		}
+
+		.circleOnCircle {
+			fill: white;
+			transform-origin: -50 -50;
+			animation: spin 5s linear infinite reverse;
+			r: 7;
+		}
+		.smileyEyes {
+			fill: black;
+			rx: 4;
+			ry: 8;
+		}
+	</style>
+</head>
+<body>
+	<svg id="smileyAnim" viewBox="-50 -50 100 100">
+		<defs>
+			<radialGradient id="lightDark">
+				<stop offset="15%" stop-color="#72a0eb" />
+				<stop offset="95%" stop-color="#254374" />
+			</radialGradient>
+		</defs>
+		<mask id="clipFace">
+			<circle cx="0" cy="0" r="24" fill="white"></circle>
+			<ellipse class="smileyEyes" cx="-8" cy="-5"></ellipse>
+			<ellipse class="smileyEyes" cx="8" cy="-5"></ellipse>
+			<path id="smileyMouth" d="M -15 5 A 20 20 90 0 0 15 5 A 1 1 0 0 1 17 7 A 22 22 90 0 1 -17 7 A 1 1 0 0 1 -15 5 Z"></path>			
+		</mask>
+		<circle id="outerWhiteLine" cx="0" cy="0" r="45"></circle>
+		<circle id="gradientCircle" cx="0" cy="0" r="45"></circle>
+		<circle id="innerWhiteLine" cx="0" cy="0" r="34"></circle>
+		<circle class="circleOnCircle" cx="34" cy="0"></circle>
+		<circle class="circleOnCircle" cx="0" cy="34"></circle>
+		<circle class="circleOnCircle" cx="0" cy="-34"></circle>
+		<circle class="circleOnCircle" cx="-34" cy="0"></circle>
+		<circle id="smileyBody" cx="0" cy="0" r="24" mask="url(#clipFace)"></circle>
+		
+
+	</svg>
+</body>
+</html>
