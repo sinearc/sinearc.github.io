@@ -33,6 +33,7 @@ img {
 
 #htmldumplistheader {
 	text-align: center;
+	width: 100%;
 }
 
 #htmldumpcontainer {
@@ -45,7 +46,7 @@ img {
 	padding: 0;
 	width: 200px;
 	margin-top: calc(-108px - 1.4em);
-	left: calc(50vw - 108px);
+	left: calc(50vw - 116px);
 	z-index: -7;
 }
 
