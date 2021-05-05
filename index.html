@@ -6,7 +6,7 @@
 		<script>
 			window.onload = function () {
 				function listToggle() {
-					list = this.nextElementSibling
+					list = document.getElementById('htmldumplist')
 					list.classList.toggle('graduallyHidden')
 				}
 				let list = document.getElementById('htmldumplistheader')
