@@ -13,6 +13,7 @@ body {
 	background-color: black;
 	color: white;
 	font-family: 'Playfair Display', serif;
+	margin: 8px;
 }
 
 ul {
@@ -28,6 +29,24 @@ li {
 
 img {
 	width: 90vw;
+}
+
+#htmldumplistheader {
+	text-align: center;
+}
+
+#htmldumpcontainer {
+	margin-top: 100px;
+}
+
+#lookAtMe {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: 200px;
+	margin-top: calc(-108px - 1.4em);
+	left: calc(50vw - 116px);
+	z-index: -7;
 }
 
 .graduallyHidden {
