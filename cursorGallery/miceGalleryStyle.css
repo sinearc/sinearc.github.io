@@ -32,10 +32,11 @@ body {
 }
 
 #mainGallery {
-	display: flex;
+	display: grid;
+	grid-template-columns: 200px 200px 200px 200px;
+	grid-row-gap: 20px;
 	width: 80vw;
-	justify-content: space-evenly;
-	flex-wrap: wrap;
+	justify-content: center;
 }
 
 .imgAndName {
@@ -44,6 +45,14 @@ body {
 	margin-bottom: 15px;
 	margin-left: 5%;
 	margin-right: 5%;
+	transition-duration: 0.5s;
+	justify-content: center;
+	align-items: center;
+}
+.imgAndName:hover {
+	margin-left: 0px;
+	margin-right: 0px;
+	transition-duration: 0.5s;
 }
 
 .cursorImgBox {
