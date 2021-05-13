@@ -23,7 +23,7 @@ a {
 
 ul {
 	overflow: hidden;
-	transition: all 1s linear;
+	transition: all 0.2s linear;
 	max-height: 0px;
 	list-style: '\26D0' outside;
 }
@@ -36,13 +36,11 @@ img {
 	width: 90vw;
 }
 
-#htmldumplistheader {
-	text-align: center;
-	width: 100%;
-}
-
 #htmldumpcontainer {
 	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
 }
 
 #lookAtMe {

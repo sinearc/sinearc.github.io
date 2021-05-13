@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap');
+
+html {
+	overflow-x: hidden;
+}
+
+h1 {
+	font-family: 'Playfair Display', serif;
+	margin-bottom: 0px;
+	margin-top: 0px;
+	font-size: 40px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-family: 'Playfair Display', serif;
+	font-size: 20px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	height: 100vh;
+	align-items: center;
+	background-color: black;
+}
+
+#mainGallery {
+	display: flex;
+	width: 80vw;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+}
+
+.imgAndName {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 15px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.cursorImgBox {
+	width: 100px;
+	height: 100px;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 5px;
+	transition: ease-in-out;
+	transition-duration: 0.5s;
+}
+.cursorImgBox:hover {
+	width: 200px;
+	height: 200px;
+}
+
+.note {
+	font-style: italic;
+	font-size: 14px;
+	color: rgba(0, 0, 0, 0);
+	height: 0px;
+	transition-delay: 0s;
+	transition-duration: 0s;
+	text-align: center;
+}
+.cursorImgBox:hover>.note {
+	color: white;
+	margin-top: 1em;
+	transition-delay: 0.5s;
+	transition-duration: 0.2s;
+	margin: 5px;
+}
+
+.lineName {
+	background-color: rgba(255, 255, 255, 0.3);
+	width: 100px;
+	height: 25px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 10px;
+	font-family: 'Playfair Display', serif;
+	color: #ffffff;
+}
+svg {
+	width: 90px;
+	height: 90px;
+}
+#topFlourish {
+	width: 100%;
+}
+#bottomFlourish {
+	width: 100%;
+}
+.header {
+	display: flex;
+	flex-direction: column;
+	margin-top: 20px;
+	margin-bottom: 30px;
+	align-items: center;
+	font-size: 40px;
+}
