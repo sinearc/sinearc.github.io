@@ -17,11 +17,13 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin-top: 25px;
 }
 
 a {
 	cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='34px' width='27px' stroke='black' stroke%2Dwidth='0%2E2' viewBox='0 0 24 31' %3E%3Cpath d='M 11 3 C 11 1 14 1 14 3 L 14 5 L 14 16 L 14 11 C 14 10 17 10 17 11 L 17 17 L 17 12 C 17 11 20 11 20 12 L 20 18 L 20 13 C 20 12 23 12 23 13 L 23 16 C 23 25 24 30 19 30 L 15 30 C 8 30 11 27 2 18 C 1 17 1 16 3 16 C 6 16 11 24 11 19 Z' fill='red'%3E%3C/path%3E%3C/svg%3E"), auto;
 	text-decoration-color: white;
+	color: white;
 }
 
 a:hover {
@@ -58,6 +60,10 @@ img {
 	align-items: center;
 	font-size: 2em;
 	color: white;
+}
+
+h1 {
+	margin-top: 70px;
 }
 
 h3 {
