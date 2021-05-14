@@ -73,6 +73,11 @@ body {
 	height: 200px;
 }
 
+.cursorImgBox:focus {
+	width: 200px;
+	height: 200px;
+}
+
 .note {
 	font-style: italic;
 	font-size: 14px;
