@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #followt {
+                height: 100px;
+                width: 100px;
+                position: absolute;
+                background-color: none;
+                transition-timing-function: cubic-bezier(.34,.45,.79,.72);
+                transform-origin: 0% 0%;
+				transform: translateX(-50%) translateY(-50%);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+            }
+
+            @keyframes rotarcurs {
+                100% {transform: rotate(360deg);}
+                80% {transform: rotate(288deg);}
+                60% {transform: rotate(216deg);}
+                40% {transform: rotate(144deg);}
+                20% {transform: rotate(72deg);}
+                0% {transform: rotate(0deg);}
+            }
+
+			#bastardchild {
+				height: 50px;
+                width: 50px;
+				position: relative;
+                background-color: rgb(255, 0, 0);
+                animation: rotarcurs 2s infinite;
+                transition-timing-function: cubic-bezier(.34,.45,.79,.72);
+                transform-origin: center;
+			}
+        </style>
+    </head>
+    <body>
+        <div id="followt">
+			<div id="bastardchild">
+
+			</div>
+        </div>
+        <script>
+            const track = function(pos) {
+                let x = pos.clientX;
+                let y = pos.clientY;
+                let point = document.getElementById("followt");
+                let width = point.style.width.match(/[0-9]+/g);
+                let height = point.style.height.match(/[0-9]+/g);
+                let hx = width / 2;
+                let hy = height / 2;
+                point.style.left = (x - hx) + "px";
+                point.style.top = (y - hy) + "px";
+				let dx = pos.movementX;
+				let dy = pos.movementY;
+				console.log({dx: dx, dy: dy})
+            }
+			document.addEventListener('mousemove', track)
+        </script> 
+    </body>
+</html>
