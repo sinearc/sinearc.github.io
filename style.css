@@ -113,3 +113,8 @@ h3 {
 	align-items: center;
 	justify-content: center;
 }
+
+#digitalGothic>svg {
+	margin-top: auto;
+	margin-bottom: auto;
+}
