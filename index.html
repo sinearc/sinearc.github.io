@@ -14,8 +14,14 @@
 					list = document.getElementById('htmldumplist')
 					list.classList.toggle('graduallyHidden')
 				}
+				function gnoseClick() {
+					console.log("gnose clicked")
+					window.open("./resume.html", "_blank")
+				}
 				let list = document.getElementById('htmldumplistheader')
+				let gnose = document.getElementById('gnose')
 				list.addEventListener('click', listToggle)
+				gnose.addEventListener('click', gnoseClick)
 				JSONDATA();
 			}
 		</script>
@@ -123,7 +129,7 @@
 						<path fill="#e0ab8b" d="M 8.5 41.5 l 6 -0.5 l -5 -3.5 l -2 0 l -5 3.5 l 0 0 z"></path>
 						<path fill="#a50d0d" d="M 2.5 40.5 C 6 37 5 31.5 7 31.5 L 10 31.5 C 12 31.5 11 37 14.5 40.5 C 7.5 40 9.5 40 2.5 40.5 Z"></path>
 						<path fill="white" d="M 7.5 41 C 4.5 41 3.5 40 2.5 41 C 0.5 43 6 44.5 8.5 44.5 C 11 44.5 16.5 43 14.5 41 C 13.5 40 12.5 41 9.5 41 Z"></path>
-						<path fill="#e0ab8b" stroke-width="0.1" stroke="white" d="M 6.5 40.5 a 1 1 0 0 0 4 0 a 1 0.5 0 0 0 -4 0 Z"></path>
+						<path fill="#e0ab8b" stroke-width="0.1" stroke="white" d="M 6.5 40.5 a 1 1 0 0 0 4 0 a 1 0.5 0 0 0 -4 0 Z" id="gnose"></path>
 					</g>
 					<path fill="grey" d="M 0 29.2 L 0 32 A 8.5 1 0 0 0 17 32 L 17 29.2 Z"></path>
 					<ellipse cx="8.5" cy="29.2" rx="8.5" ry="0.8"fill="rgb(100,100,100)"></ellipse>
