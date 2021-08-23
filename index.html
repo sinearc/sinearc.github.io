@@ -33,8 +33,10 @@
 				}
 				function up() {
 					let press = document.getElementById('press')
+					if (gnomeCrushed) {
 					press.classList.toggle('hydraulRev')
-					press.classList.toggle('hydraul')
+					press.classList.toggle('hydraul')						
+					}
 				}
 				let list = document.getElementById('htmldumplistheader')
 				let gnose = document.getElementById('gnose')

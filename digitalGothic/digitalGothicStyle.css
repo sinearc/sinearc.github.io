@@ -44,10 +44,15 @@ body {
 }
 
 img {
-    max-width: 25vw;
+    max-width: 30vw;
+	min-height: 100%;
+	margin-left: 1vw;
 }
 
 #main {
     display: flex;
     flex-direction: row;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
 }
