@@ -9,6 +9,7 @@
 		<link rel="stylesheet" href="style.css">
 		<script src="./script.js" crossorigin="anonymous"></script>
 		<script>
+			let gnomeCrushed = false
 			window.onload = function () {
 				function listToggle() {
 					list = document.getElementById('htmldumplist')
@@ -18,13 +19,63 @@
 					console.log("gnose clicked")
 					window.open("./resume.html", "_blank")
 				}
+				function down() {
+					let gnome = document.getElementById('gnome')
+					let press = document.getElementById('press')
+					if (press.classList.contains('hydraulRev')) {
+						press.classList.toggle('hydraulRev')
+					}
+					if (!gnomeCrushed) {
+					gnome.classList.toggle('gnomeCrush')
+					gnomeCrushed = true						
+					}
+					press.classList.toggle('hydraul')
+				}
+				function up() {
+					let press = document.getElementById('press')
+					press.classList.toggle('hydraulRev')
+					press.classList.toggle('hydraul')
+				}
 				let list = document.getElementById('htmldumplistheader')
 				let gnose = document.getElementById('gnose')
+				let upButton = document.getElementById('crushUp')
+				let downButton = document.getElementById('crushDown')
 				list.addEventListener('click', listToggle)
 				gnose.addEventListener('click', gnoseClick)
+				downButton.addEventListener('click', down)
+				upButton.addEventListener('click', up)
 				JSONDATA();
 			}
 		</script>
+			<style>
+				@keyframes hydraulicPress {
+					0% {transform: translateY(0%)}
+					100% {transform: translateY(26%)}
+				}
+
+				@keyframes hydraulicPressUp {
+					0% {transform: translateY(26%)}
+					100% {transform: translateY(0%)}
+				}
+
+				@keyframes crush {
+					0% {transform: scaleY(1)}
+					100% {transform: scaleY(0.1);}
+				}
+
+				.gnomeCrush {
+					transform-origin: 50% 89%;
+					animation: crush 2s linear 1 normal forwards;
+				}
+
+				.hydraul {
+					animation: hydraulicPress 2s linear 1 normal forwards;
+				}
+
+				.hydraulRev {
+					animation: hydraulicPressUp 2s linear 1 normal forwards;
+				}
+			</style>
 	</head>
 	<body>
 		<h1>Ordered and unordered lists are evils to be avoided</h1>
@@ -116,7 +167,7 @@
 			</div>
 
 			<div style="height: 300px; display: flex; flex-direction: column; justify-content: flex-end; align-items:flex-end;">
-				<svg viewBox="-2.1 0 21.2 50" id="hydraulicGnome">
+				<svg viewBox="-15 0 34.2 50" id="hydraulicGnome">
 					<clipPath id="hydraulicCylClip">
 						<path d="M 0 0 L 0 26 L 17 26 L 17 0 Z"></path>
 					</clipPath>
@@ -131,9 +182,20 @@
 						<path fill="white" d="M 7.5 41 C 4.5 41 3.5 40 2.5 41 C 0.5 43 6 44.5 8.5 44.5 C 11 44.5 16.5 43 14.5 41 C 13.5 40 12.5 41 9.5 41 Z"></path>
 						<path fill="#e0ab8b" stroke-width="0.1" stroke="white" d="M 6.5 40.5 a 1 1 0 0 0 4 0 a 1 0.5 0 0 0 -4 0 Z" id="gnose" style="cursor: pointer;"></path>
 					</g>
-					<path fill="grey" d="M 0 29.2 L 0 32 A 8.5 1 0 0 0 17 32 L 17 29.2 Z"></path>
-					<ellipse cx="8.5" cy="29.2" rx="8.5" ry="0.8"fill="rgb(100,100,100)"></ellipse>
-					<path fill="grey" d="M 5 25 L 12 25 L 12 29 A 4 0.8 0 0 1 5 29 Z"></path>
+					<g id="crushUp">
+						<path fill="#606060" d="M -12 2 L -6 2 A 1 1 0 0 1 -5 3 L -5 8 A 1 1 0 0 1 -6 9 L -12 9 A 1 1 0 0 1 -13 8 L -13 3 A 1 1 0 0 1 -12 2 Z" />
+						<path fill="rgb(0, 200, 0)" d="M -10 8 L -10 5 L -11 5 L -9 3 L -7 5 L -8 5 L -8 8 Z" />
+					</g>
+					<g id="crushDown">
+						<path fill="#606060" d="M -12 10 L -6 10 A 1 1 0 0 1 -5 11 L -5 16 A 1 1 0 0 1 -6 17 L -12 17 A 1 1 0 0 1 -13 16 L -13 11 A 1 1 0 0 1 -12 10 Z" />
+						<path fill="red" d="M -8 11 L -8 14 L -7 14 L -9 16 L -11 14 L -10 14 L -10 11 Z" />
+					</g>
+					<g id="press">
+						<path fill="grey" d="M 0 29.2 L 0 32 A 8.5 1 0 0 0 17 32 L 17 29.2 Z"></path>
+						<ellipse cx="8.5" cy="29.2" rx="8.5" ry="0.8"fill="rgb(100,100,100)"></ellipse>
+						<path fill="grey" d="M 5 0 L 12 0 L 12 29 A 4 0.8 0 0 1 5 29 Z"></path>	
+					</g>
+					
 					<g clip-path="url(#hydraulicCylClip)">
 						<path fill="black" d="M 0 0 L 0 26 L 17 26 L 17 0 Z"></path>
 						<path fill="yellow" d="M 17 26 c 0 -5 -17 -9 -17 -14 l 0 -6 c 0 5 17 9 17 14 z M 17 37 c 0 -5 -17 -9 -17 -14 l 0 -6 c 0 5 17 9 17 14 z M 17 15 c 0 -5 -17 -9 -17 -14 l 0 -6 c 0 5 17 9 17 14 z M 17 4 c 0 -5 -17 -9 -17 -14 l 0 -6 c 0 5 17 9 17 14 z"></path>
