@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+		body {
+			box-sizing: border-box;
+			width: 100vw;
+			height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: Arial, Helvetica, sans-serif;
+			color: white;
+		}
+		#mainContainer {
+			box-sizing: inherit;
+			padding: 5px;
+			height: 300px;
+			width: 400px;
+			background-image: linear-gradient(to right,  #7c2cff, #374dee) ;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+			border: solid 2px magenta
+		}
+		#topRounded {
+			color: white;
+			background-color: #ff7300;
+			font-size: 20px;
+			line-height: 20px;
+			padding: 8px;
+			height: 20px;
+			border-radius: 18px;
+			box-shadow: 2px 3px 0px 0px #020a9a;
+		}
+		#bottomRounded {
+			color: #7c2cff;
+			background-color: #fffa02;
+			font-size: 27px;
+			line-height: 20px;
+			padding: 8px;
+			height: 17px;
+			border-radius: 18px;
+			box-shadow: 2px 3px 0px 0px #020a9a;
+		}
+		#mainTextBody {
+			color: #ffdf09;
+			text-align: center;
+			padding-top: 10px;
+		}
+		.mainTextLarge {
+			font-size: 20px;
+			line-height: 20px;
+			font-weight: 700;
+		}
+		.mainTextSmall {
+			font-size: 15px;
+			line-height: 17px;
+			font-weight: 700;
+		}
+		.secondary {
+			color: white;
+			font-size: 17px;
+			padding-bottom: 2px;
+		}
+		#image {
+			clip-path: polygon(0% 0%, 100% 2%, 100% 100%, 8% 100%);
+			width: 300px;
+			height: 150px;
+			align-self: flex-end;
+			margin-right: -5px;
+			margin-top: 10px;
+		}
+		#overlayedLeftInside {
+			box-sizing: border-box;
+			background-color: #ff7300;
+			clip-path: polygon(0% 0%, 0% 100%, 95% 100%, 100% 0%);
+			height: 100px;
+			width: 200px;
+			padding: 8px;
+		}
+		#overlayedLeft {
+			position: relative;
+			top: -67px;
+			left: -100px;
+		}
+		#listTitle {
+			font-weight: 700;
+			font-size: 15px;
+			line-height: 15px;
+			margin-bottom: 3px;
+		}
+		#list {
+			margin: 0px;
+			padding-left: 10px;
+			list-style: '\2713' inside;
+		}
+		#list>li::marker {
+			font-weight: 700;
+		}
+		#list>li {
+			line-height: 16px;
+		}
+		#overlayedRightInside {
+			box-sizing: border-box;
+			text-align: center;
+			width: 250px;
+			padding: 8px;
+		}
+		#overlayedRight {
+			position: relative;
+			top: -135px;
+			left: 80px;
+			z-index: 50;
+		}
+	</style>
+</head>
+<body>
+	<div id="mainContainer">
+		<div id="topRounded">
+			<B>HEY!</B> CHECK THIS OUT
+		</div>
+		<div id="mainTextBody">
+			<div class="mainTextLarge">
+				SOME ARBITRARY LARGE TEXT
+			</div>
+			<div class="mainTextSmall">
+				SOME LESS LARGE TEXT
+			</div>
+			<div class="mainTextLarge">
+				SOME MORE LARGE TEXT
+			</div>			
+		</div>
+		<img id="image" src="./IMAGE.png" />
+		<div id="overlayedLeft">
+			<div id="overlayedLeftInside">
+				<div id="listTitle">
+					content
+				</div>
+				<ul id="list">
+					<li>
+						content
+					</li>
+					<li>
+						content
+					</li>
+					<li>
+						content
+					</li>
+					<li>
+						content
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="overlayedRight">
+			<div id="overlayedRightInside">
+				<div class="mainTextSmall secondary">
+					Content?
+				</div>
+				<div id="bottomRounded">
+					<B>917-555-7391</B>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
